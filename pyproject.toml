@@ -20,7 +20,7 @@ classifiers = [
 
 dependencies = [
     "anthropic>=1.2.0",
-    "openai>=3.5.0",
+    "openai>=3.16.2",
 ]
 
 [project.optional-dependencies]
