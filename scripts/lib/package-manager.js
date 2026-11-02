@@ -253,7 +253,7 @@ function setPreferredPackageManager(pmName) {
   try {
     saveConfig(config);
   } catch (err) {
-    throw new Error(`Failed to save package manager preference: ${err.message}`);
+    throw new Error(`Failed to save package manager preference: ${err.message}`, { cause: err });
   }
 
   return config;
@@ -278,7 +278,7 @@ function setProjectPackageManager(pmName, projectDir = process.cwd()) {
   try {
     writeFile(configPath, JSON.stringify(config, null, 2));
   } catch (err) {
-    throw new Error(`Failed to save package manager config to ${configPath}: ${err.message}`);
+    throw new Error(`Failed to save package manager config to ${configPath}: ${err.message}`, { cause: err });
   }
   return config;
 }

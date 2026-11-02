@@ -335,7 +335,7 @@ function findPluginInstallMarketplaceCache(candidateRoots) {
           continue;
         }
 
-        let versions = [];
+        let versions;
         try {
           versions = fs
             .readdirSync(pluginRoot, { withFileTypes: true })
