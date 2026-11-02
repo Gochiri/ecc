@@ -492,7 +492,7 @@ function applyInstallPlan(plan, dependencies = {}) {
       } catch (checkpointError) {
         throw new Error(
           `${error.message} Install-state checkpoint also failed: ${checkpointError.message}`,
-          { cause: error }
+          { cause: checkpointError }
         );
       }
     }

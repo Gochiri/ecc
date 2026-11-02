@@ -58,7 +58,7 @@ function normalizeComparablePath(filePath) {
     return nativePath;
   }
 
-  let comparablePath = nativePath;
+  let comparablePath;
   try {
     comparablePath = fs.realpathSync.native ? fs.realpathSync.native(nativePath) : fs.realpathSync(nativePath);
   } catch {
